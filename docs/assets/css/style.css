@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #ccc;
+    background: rgb(32, 35, 37);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 1px solid rgb(10, 10, 10);
+    background-color: rgb(28, 32, 34);
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+}
+
+.header .left a {
+    text-decoration: none;
+}
+
+.header .left a .logo {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.header .left a .version {
+    color: rgb(103, 191, 0);
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.header .left a .description {
+    color: #8e8e8e;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header .right .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #f1fa8c;
+    border-left: 1px solid rgb(17, 21, 24);
+    background-color: rgb(39, 41, 54);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.header .right .item:hover {
+    color: #fff;
+    background-color: rgb(66, 82, 95);
+}
+
+.header .right .item .open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.main .left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-right: 1px solid rgb(10, 10, 10);
+}
+
+.main .left .row {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    border-bottom: 1px solid rgb(10, 10, 10);
+}
+
+.main .left .row .item {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    align-items: center;
+    line-height: 1;
+    height: 100%;
+    padding: 10px;
+    border-right: 1px solid rgb(10, 10, 10);
+}
+
+.main .left .row .item:last-child {
+    border-right: none;
+}
+
+.main .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: rgb(16, 17, 19);
+}
+
+.main .right video {
+    max-width: 100%;
+}
+
+.waveform {
+    display: flex;
+    height: 200px;
+    background-color: rgb(28, 32, 34);
+    border-top: 1px solid rgb(10, 10, 10);
+}
+
+.pickr .pcr-button {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}

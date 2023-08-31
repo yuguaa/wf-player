@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WFPlayer.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="WFPlayer.js is an audio waveform generator" />
+    <meta name="keywords" content="WFPlayer, audio, waveform, generator" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pickr.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="left">
+                <a href="/">
+                    <span class="logo">WFPlayer.js</span>
+                    <span class="version">Beta 1.0.0</span>
+                    <span class="description">An Audio Waveform Generator</span>
+                </a>
+            </div>
+            <div class="log"></div>
+            <div class="right">
+                <a class="item" href="https://github.com/zhw2590582/WFPlayer">
+                    Github
+                </a>
+                <div class="item">
+                    Open File
+                    <input class="open" type="file" name="file" />
+                </div>
+            </div>
+        </header>
+        <section class="main">
+            <div class="left">
+                <div class="row">
+                    <div class="item">
+                        <div class="name">Wave: </div>
+                        <input class="checkbox" type="checkbox" name="wave" checked>
+                        <div class="color-picker" name="waveColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Background: </div>
+                        <div class="color-picker" name="backgroundColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Padding: </div>
+                        <div class="color-picker" name="paddingColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Cursor: </div>
+                        <input class="checkbox" type="checkbox" name="cursor" checked>
+                        <div class="color-picker" name="cursorColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Progress: </div>
+                        <input class="checkbox" type="checkbox" name="progress" checked>
+                        <div class="color-picker" name="progressColor"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="name">Grid: </div>
+                        <input class="checkbox" type="checkbox" name="grid" checked>
+                        <div class="color-picker" name="gridColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Ruler: </div>
+                        <input class="checkbox" type="checkbox" name="ruler" checked>
+                        <div class="color-picker" name="rulerColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Scrollbar: </div>
+                        <input class="checkbox" type="checkbox" name="scrollbar" checked>
+                        <div class="color-picker" name="scrollbarColor"></div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Ruler At Top: </div>
+                        <input class="checkbox" type="checkbox" name="rulerAtTop" checked>
+                    </div>
+                    <div class="item">
+                        <div class="name">Scrollable: </div>
+                        <input class="checkbox" type="checkbox" name="scrollable" checked>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="name">Duration: </div>
+                        <input class="range" type="range" name="duration" min="2" max="100" step="2" value="10">
+                        <div class="value">10</div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Padding: </div>
+                        <input class="range" type="range" name="padding" min="1" max="20" step="1" value="5">
+                        <div class="value">5</div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Pixel Ratio: </div>
+                        <input class="range" type="range" name="pixelRatio" min="1" max="2" step="1" value="1">
+                        <div class="value">1</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="name">Wave Scale: </div>
+                        <input class="range" type="range" name="waveScale" min="0.1" max="2" step="0.1" value="0.8">
+                        <div class="value">0.8</div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Wave Size: </div>
+                        <input class="range" type="range" name="waveSize" min="1" max="10" step="1" value="1">
+                        <div class="value">1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <video class="video" src="https://wfplayer.js.org/sample.mp4" controls></video>
+            </div>
+        </section>
+        <footer class="waveform"></footer>
+    </div>
+    <script src="./uncompiled/index.js"></script>
+    <script src="./assets/js/pickr.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var isLocalhost = Boolean(
+                window.location.hostname === 'localhost' ||
+                window.location.hostname === '[::1]' ||
+                window.location.hostname.match(
+                    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+                )
+            );
+            if (!isLocalhost) {
+                var hm = document.createElement('script');
+                hm.src = 'https://hm.baidu.com/hm.js?cd425c6b70404ba52be05e13b839e229';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(hm, s);
+            }
+        })();
+
+    </script>
+</body>
+
+</html>

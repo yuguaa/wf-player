@@ -1,0 +1,48 @@
+{
+  "name": "wfplayer",
+  "version": "2.2.7",
+  "description": "WFPlayer.js is an audio waveform generator",
+  "main": "dist/wfplayer.js",
+  "types": "types/wfplayer.d.ts",
+  "scripts": {
+    "dev": "npx cross-env NODE_ENV=development node ./scripts/dev.mjs",
+    "build": "npx cross-env NODE_ENV=production node ./scripts/build.mjs",
+    "test": "npx eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhw2590582/WFPlayer.git"
+  },
+  "keywords": [
+    "waveform",
+    "audio",
+    "canvas"
+  ],
+  "author": "Harvey Zack <laozhaochaguan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhw2590582/WFPlayer/issues"
+  },
+  "homepage": "https://github.com/zhw2590582/WFPlayer#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@parcel/config-default": "^2.7.0",
+    "@babel/plugin-external-helpers": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "@parcel/core": "^2.7.0",
+    "@parcel/optimizer-data-url": "^2.7.0",
+    "@parcel/reporter-cli": "^2.7.0",
+    "@parcel/transformer-inline-string": "^2.7.0",
+    "@parcel/transformer-less": "^2.7.0",
+    "@parcel/transformer-vue": "^2.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.25.0",
+    "servor": "^4.0.2"
+  },
+  "dependencies": {
+    "option-validator": "^2.0.6"
+  }
+}
