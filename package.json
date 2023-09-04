@@ -1,29 +1,30 @@
 {
-  "name": "wfplayer",
-  "version": "2.2.7",
+  "name": "@yugu/wfplayer",
+  "version": "0.0.5",
   "description": "WFPlayer.js is an audio waveform generator",
   "main": "dist/wfplayer.js",
   "types": "types/wfplayer.d.ts",
   "scripts": {
     "dev": "npx cross-env NODE_ENV=development node ./scripts/dev.mjs",
     "build": "npx cross-env NODE_ENV=production node ./scripts/build.mjs",
+    "release": "npm run build && npm publish --access public",
     "test": "npx eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhw2590582/WFPlayer.git"
+    "url": "git+https://github.com/yuguaa/wf-player.git"
   },
   "keywords": [
     "waveform",
     "audio",
     "canvas"
   ],
-  "author": "Harvey Zack <laozhaochaguan@gmail.com>",
+  "author": "yuguaa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhw2590582/WFPlayer/issues"
+    "url": "https://github.com/yuguaa/wf-player/issues"
   },
-  "homepage": "https://github.com/zhw2590582/WFPlayer#readme",
+  "homepage": "https://github.com/yuguaa/wf-player#readme",
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",

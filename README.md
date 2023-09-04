@@ -1,12 +1,8 @@
 # WFPlayer
+## 重要：此项目依据开源项目 wfplayer 二次改造而成，感谢 zhw2590582 的无私开源
 
-![version](https://badgen.net/npm/v/wfplayer)
-![license](https://badgen.net/npm/license/wfplayer)
-![size](https://badgen.net/bundlephobia/minzip/wfplayer)
-
+### 该项目禁用了loader，来加载音频数据过大解决导致浏览器崩溃的问题，wave参数无论true和false都无法渲染出音波
 > WFPlayer.js is an audio waveform generator
-
-![Screenshot](./images/screenshot.png)
 
 ## Demo
 
@@ -27,17 +23,17 @@
 Install with `npm`
 
 ```bash
-$ npm install wfplayer
+$ npm install @yugu/wfplayer
 ```
 
 Or install with `yarn`
 
 ```bash
-$ yarn add wfplayer
+$ yarn add @yugu/wfplayer
 ```
 
 ```js
-import WFPlayer from 'wfplayer';
+import WFPlayer from '@yugu/wfplayer';
 ```
 
 Or umd builds are also available
@@ -68,10 +64,10 @@ var wf = new WFPlayer({
     mediaElement: document.querySelector('#video'),
 });
 
-wf.load(document.querySelector('#video'));
+wf.load();
 
 // or
-wf.load('path/to/audio.mp3');
+wf.load();
 ```
 
 ## API
@@ -329,18 +325,6 @@ waveform.addEventListener('click', event => {
     console.log(currentTime);
 })
 ```
-
-## Donations
-
-We accept donations through these channels:
-
--   [Paypal](https://www.paypal.me/harveyzack)
--   [WeChat Pay](./images/wechatpay.jpg)
--   [Alipay](./images/alipay.jpg)
-
-## QQ Group
-
-![QQ Group](./images/qqgroup.png)
 
 ## License
 

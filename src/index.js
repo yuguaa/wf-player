@@ -4,7 +4,7 @@ import Events from './events';
 import Template from './template';
 import Drawer from './drawer';
 import Decoder from './decoder';
-import Loader from './loader';
+// import Loader from './loader';
 import Controller from './controller';
 import style from 'bundle-text:./style.less';
 import { clamp, errorHandle, addClass, removeClass } from './utils';
@@ -101,7 +101,7 @@ export default class WFPlayer extends Emitter {
         this.decoder = new Decoder(this);
         this.drawer = new Drawer(this);
         this.controller = new Controller(this);
-        this.loader = new Loader(this);
+        // this.loader = new Loader(this);
 
         this.update();
 
@@ -186,34 +186,35 @@ export default class WFPlayer extends Emitter {
         return this;
     }
 
-    load(target) {
-        // Audiobuffer
-        if (target && typeof target.getChannelData === 'function') {
-            this.decoder.decodeSuccess(target);
-            this.controller.init();
-            return this;
-        }
+    // load(target) {
+    load() {
+        // // Audiobuffer
+        // if (target && typeof target.getChannelData === 'function') {
+        //     this.decoder.decodeSuccess(target);
+        //     this.controller.init();
+        //     return this;
+        // }
 
-        // Uint8Array
-        if (target && target.buffer) {
-            this.decoder.decodeAudioData(target);
-            this.controller.init();
-            return this;
-        }
+        // // Uint8Array
+        // if (target && target.buffer) {
+        //     this.decoder.decodeAudioData(target);
+        //     this.controller.init();
+        //     return this;
+        // }
 
-        // HTMLVideoElement or HTMLAudioElement
-        if (target instanceof HTMLVideoElement || target instanceof HTMLAudioElement) {
-            this.options.mediaElement = target;
-            target = target.currentSrc || target.src;
-        }
+        // // HTMLVideoElement or HTMLAudioElement
+        // if (target instanceof HTMLVideoElement || target instanceof HTMLAudioElement) {
+        //     this.options.mediaElement = target;
+        //     target = target.currentSrc || target.src;
+        // }
 
-        errorHandle(
-            typeof target === 'string' && target.trim(),
-            `The load target is not a string. If you are loading a mediaElement, make sure the mediaElement.src is not empty.`,
-        );
+        // errorHandle(
+        //     typeof target === 'string' && target.trim(),
+        //     `The load target is not a string. If you are loading a mediaElement, make sure the mediaElement.src is not empty.`,
+        // );
 
         // String Url
-        this.loader.load(target);
+        // this.loader.load(target);
         this.controller.init();
         return this;
     }
@@ -291,7 +292,7 @@ export default class WFPlayer extends Emitter {
                         resolve(this);
                     }
                 });
-            }.call(this));
+            }).call(this);
         });
     }
 
@@ -326,7 +327,7 @@ export default class WFPlayer extends Emitter {
         this.template.destroy();
         this.controller.destroy();
         this.decoder.destroy();
-        this.loader.destroy();
+        // this.loader.destroy();
         this.drawer.destroy();
         instances.splice(instances.indexOf(this), 1);
         return this;

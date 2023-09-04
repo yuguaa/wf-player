@@ -27,8 +27,8 @@ import { Parcel } from '@parcel/core';
     const banner =
         '/*!\n' +
         ` * wfplayer.js v${version}\n` +
-        ` * Github: https://github.com/zhw2590582/WFPlayer\n` +
-        ` * (c) 2017-${new Date().getFullYear()} Harvey Zack\n` +
+        ` * Github: https://github.com/yuguaa/wf-player\n` +
+        ` * (c) 2017-${new Date().getFullYear()} yuguaa\n` +
         ' * Released under the MIT License.\n' +
         ' */\n';
 

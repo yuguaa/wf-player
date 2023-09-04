@@ -94,6 +94,8 @@ function drawRuler(data) {
 }
 
 function drawWave(data) {
+    console.log(`🚀 ~ data:`, data);
+
     const {
         width,
         height,
@@ -212,7 +214,7 @@ self.onmessage = function onmessage(event) {
             drawRuler(data);
         }
 
-        if (data.wave) {
+        if (!data.wave) {
             drawWave(data);
         }
 
