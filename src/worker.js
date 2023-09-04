@@ -94,8 +94,6 @@ function drawRuler(data) {
 }
 
 function drawWave(data) {
-    console.log(`🚀 ~ data:`, data);
-
     const {
         width,
         height,
