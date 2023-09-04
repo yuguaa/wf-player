@@ -1,6 +1,6 @@
 {
   "name": "@yugu/wfplayer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "WFPlayer.js is an audio waveform generator",
   "main": "dist/wfplayer.js",
   "types": "types/wfplayer.d.ts",
